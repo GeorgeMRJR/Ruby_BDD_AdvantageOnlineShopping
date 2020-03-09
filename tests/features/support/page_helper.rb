@@ -12,4 +12,8 @@ module Pages
   def cadastro
     @cadastro ||= Cadastro.new
   end
+
+  def base
+    @base ||= Base.new
+  end
 end

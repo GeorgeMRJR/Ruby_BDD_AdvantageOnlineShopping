@@ -1,6 +1,5 @@
   
 ---
 
-default: -p pretty -p homolog
+default: -p pretty
 pretty: --format pretty
-homolog: AMBIENTE=homolog

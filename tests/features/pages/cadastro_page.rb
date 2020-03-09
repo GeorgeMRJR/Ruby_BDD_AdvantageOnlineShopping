@@ -1,53 +1,84 @@
-class Cadastro < SitePrism::Page
+class Cadastro < Base
   set_url "/register"
   element :nome_usuario, "input[name='usernameRegisterPage']"
+  element :email, "input[name='emailRegisterPage']"
+  element :senha, "input[name='passwordRegisterPage']"
+  element :re_senha, "input[name='confirm_passwordRegisterPage']"
+  element :nome, "input[name='first_nameRegisterPage']"
+  element :sobre_nome, "input[name='last_nameRegisterPage']"
+  element :telefone, "input[name='phone_numberRegisterPage']"
+  element :continente, "input[name='countryListboxRegisterPage']"
+  element :cidade, "input[name='cityRegisterPage']"
+  element :endereco, "input[name='addressRegisterPage']"
+  element :cep, "input[name='postal_codeRegisterPage']"
+  element :estado, "input[name='state_/_province_/_regionRegisterPage']"
+  element :termos, "input[name='i_agree']"
+  element :registrar, "#register_btnundefined"
 
-  element :email, "input[name='usernameRegisterPage']"
-  element :senha, "input[name='usernameRegisterPage']"
-  element :re_senha, "input[name='usernameRegisterPage']"
-  element :nome, "input[name='usernameRegisterPage']"
-  element :sobre_nome, "input[name='usernameRegisterPage']"
-  element :telefone, "input[name='usernameRegisterPage']"
-  # element :continente, "input[name='usernameRegisterPage']"
-  element :cidade, "input[name='usernameRegisterPage']"
-  element :endereco, "input[name='usernameRegisterPage']"
-  element :estado, "input[name='usernameRegisterPage']"
-  element :termos, "input[name='usernameRegisterPage']"
-  element :registrar, "input[name='usernameRegisterPage']"
-
-  def digitar_user_name(username)
-    nome_usuario.set(username)
+  def digitar_user_name(username_txt)
+    nome_usuario.set(username_txt)
+    sleep(3)
   end
 
-  def digitar_user_name(username)
-    nome_usuario.set(username)
+  def digitar_email(email_txt)
+    email.set(email)
+    sleep(3)
   end
 
-  def digitar_user_name(username)
-    nome_usuario.set(username)
+  def digitar_senha(senha_txt)
+    senha.set(senha_txt)
+    sleep(3)
   end
 
-  def digitar_user_name(username)
-    nome_usuario.set(username)
+  def digitar_re_senha(re_senha_txt)
+    re_senha.set(re_senha_txt)
+    sleep(3)
   end
 
-  def digitar_user_name(username)
-    nome_usuario.set(username)
+  def digitar_nome(nome_txt)
+    nome.set(nome_txt)
+    # rolar(200)
+    sleep(3)
   end
 
-  def digitar_user_name(username)
-    nome_usuario.set(username)
+  def digitar_sobre_nome(sobre_nome_txt)
+    # rolar(200)
+    sobre_nome.set(sobre_nome_txt)
+    sleep(3)
   end
 
-  def digitar_user_name(username)
-    nome_usuario.set(username)
+  def digitar_telefone(telefone_txt)
+    sobre_nome.set(telefone)
+    sleep(3)
   end
 
-  def digitar_user_name(username)
-    nome_usuario.set(username)
+  def selecionar_continente(continente_txt)
+    continente.select(continente_txt)
+    sleep(3)
   end
 
-  def digitar_user_name(username)
-    nome_usuario.set(username)
+  def digitar_cidade(cidade_txt)
+    cidade.set(cidade_txt)
+    sleep(3)
+  end
+
+  def digitar_endereco(endereco_txt)
+    endereco.set(endereco_txt)
+  end
+
+  def digitar_cep(cep_txt)
+    cep.set(cep_txt)
+  end
+
+  def digitar_estado(estado_txt)
+    estado.set(estado_txt)
+  end
+
+  def aceitar_termos
+    termos.click
+  end
+
+  def clicar_registar
+    registrar.click
   end
 end

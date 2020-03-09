@@ -1,14 +1,13 @@
-class Home < SitePrism::Page
+class Home < Base
   set_url "/"
   element :icone_usuario, "#menuUserLink"
-  element :criar_nova_conta, "a[value='CREATE NEW ACCOUNT']"
+  element :criar_nova_conta, ".create-new-account.ng-scope"
 
   def clicar_usuario
     icone_usuario.click
   end
 
   def clicar_nova_conta
-    # criar_nova_conta.click
-    visit "https://www.advantageonlineshopping.com/#/register"
+    criar_nova_conta.send_keys :enter
   end
 end

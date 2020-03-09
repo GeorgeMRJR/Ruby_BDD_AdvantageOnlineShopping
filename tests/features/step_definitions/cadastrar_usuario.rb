@@ -1,6 +1,5 @@
 Dado("que estou no site advantage online shopping") do
   home.load
-  sleep(10)
 end
 
 Dado("nao estou logado") do
@@ -12,55 +11,54 @@ end
 
 Quando("clico no link de criar nova conta") do
   home.clicar_nova_conta
-  sleep(5)
 end
 
-Quando("Digito o nome de usuario {string}") do |username|
-  cadastro.digitar_user_name(username)
+Quando("Digito o nome de usuario {string}") do |username_txt|
+  cadastro.digitar_user_name(username_txt)
 end
 
-Quando("Digito a senha {string}") do |senha|
-  cadastro.digitar_senha(senha)
+Quando("Digito a senha {string}") do |senha_txt|
+  cadastro.digitar_senha(senha_txt)
 end
 
-Quando("Digito a comfirmacao da senha {string}") do |resenha|
-  cadastro.digitar_senha(resenha)
+Quando("Digito a comfirmacao da senha {string}") do |re_senha_txt|
+  cadastro.digitar_re_senha(re_senha_txt)
 end
 
-Quando("Digito o email {string}") do |email|
-  cadastro.digitar_email(email)
+Quando("Digito o email {string}") do |email_txt|
+  cadastro.digitar_email(email_txt)
 end
 
-Quando("Digito o primeiro nome {string}") do |nome|
-  cadastro.digitar_nome(nome)
+Quando("Digito o primeiro nome {string}") do |nome_txt|
+  cadastro.digitar_nome(nome_txt)
 end
 
-Quando("Digito o sobre nome {string}") do |sobrenome|
-  cadastro.digitar_sobre_nome(sobrenome)
+Quando("Digito o sobre nome {string}") do |sobrenome_txt|
+  cadastro.digitar_sobre_nome(sobrenome_txt)
 end
 
-Quando("Digito o telefone {string}") do |telefone|
-  cadastro.digitar_telefone(telefone)
+Quando("Digito o telefone {string}") do |telefone_txt|
+  cadastro.digitar_telefone(telefone_txt)
 end
 
-Quando("Seleciono o continente {string}") do |continente|
-  cadastro.selecionar_continente(continente)
+Quando("Seleciono o continente {string}") do |continente_txt|
+  cadastro.selecionar_continente(continente_txt)
 end
 
-Quando("Digito a cidade {string}") do |cidade|
-  cadastro.digitar_cidade(cidade)
+Quando("Digito a cidade {string}") do |cidade_txt|
+  cadastro.digitar_cidade(cidade_txt)
 end
 
-Quando("Digito o endereco {string}") do |endereco|
-  cadastro.digitar_endereco(endereco)
+Quando("Digito o endereco {string}") do |endereco_txt|
+  cadastro.digitar_endereco(endereco_txt)
 end
 
-Quando("Digito o estado {string}") do |estado|
-  cadastro.digitar_estado(estado)
+Quando("Digito o estado {string}") do |estado_txt|
+  cadastro.digitar_estado(estado_txt)
 end
 
-Quando("Digito o codigo postal {string}") do |postal|
-  cadastro.digitar_postal(postal)
+Quando("Digito o codigo postal {string}") do |cep_txt|
+  cadastro.digitar_cep(cep_txt)
 end
 
 Quando("clico em aceito os termos de uso") do
@@ -71,7 +69,7 @@ Entao("o botao de registrar deve estar abilitado") do
 end
 
 Entao("clico no botao de registro") do
-  cadastro.registrar
+  cadastro.clicar_registrar
 end
 
 Entao("o usuario estara cadastrado") do
