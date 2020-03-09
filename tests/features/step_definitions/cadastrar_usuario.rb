@@ -14,7 +14,11 @@ Quando("clico no link de criar nova conta") do
 end
 
 Quando("Digito o nome de usuario {string}") do |username_txt|
-  cadastro.digitar_user_name(username_txt)
+  @rand = Random.rand 0...10000
+  puts username_txt + @rand.to_s
+  cadastro.digitar_user_name(username_txt + @rand.to_s)
+  base.rolar(250)
+  # execute_script "window.scrollBy(0,250)"
 end
 
 Quando("Digito a senha {string}") do |senha_txt|
@@ -42,7 +46,8 @@ Quando("Digito o telefone {string}") do |telefone_txt|
 end
 
 Quando("Seleciono o continente {string}") do |continente_txt|
-  cadastro.selecionar_continente(continente_txt)
+  base.rolar(250)
+  # cadastro.selecionar_continente(continente_txt)
 end
 
 Quando("Digito a cidade {string}") do |cidade_txt|
@@ -69,7 +74,8 @@ Entao("o botao de registrar deve estar abilitado") do
 end
 
 Entao("clico no botao de registro") do
-  cadastro.clicar_registrar
+  sleep 3
+  cadastro.clicar_registar
 end
 
 Entao("o usuario estara cadastrado") do

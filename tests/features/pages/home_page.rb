@@ -1,4 +1,4 @@
-class Home < Base
+class Home < SitePrism::Page
   set_url "/"
   element :icone_usuario, "#menuUserLink"
   element :criar_nova_conta, ".create-new-account.ng-scope"
