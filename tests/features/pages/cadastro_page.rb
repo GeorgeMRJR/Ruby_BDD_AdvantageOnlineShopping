@@ -44,7 +44,8 @@ class Cadastro < SitePrism::Page
   end
 
   def selecionar_continente(continente_txt)
-    continente.select(continente_txt)
+    # continente.select(continente_txt)
+    select("continente_txt", :from => continente)
   end
 
   def digitar_cidade(cidade_txt)
@@ -68,8 +69,8 @@ class Cadastro < SitePrism::Page
   end
 
   def clicar_registar
-    sleep 3
+    # sleep 3
     registrar.click
-    sleep 3
+    # sleep 3
   end
 end

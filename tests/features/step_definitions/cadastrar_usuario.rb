@@ -18,7 +18,6 @@ Quando("Digito o nome de usuario {string}") do |username_txt|
   puts username_txt + @rand.to_s
   cadastro.digitar_user_name(username_txt + @rand.to_s)
   base.rolar(250)
-  # execute_script "window.scrollBy(0,250)"
 end
 
 Quando("Digito a senha {string}") do |senha_txt|
@@ -74,9 +73,10 @@ Entao("o botao de registrar deve estar abilitado") do
 end
 
 Entao("clico no botao de registro") do
-  sleep 3
+  # sleep 3
   cadastro.clicar_registar
 end
 
 Entao("o usuario estara cadastrado") do
+  expect(page).to have_selector(".hi-user.containMiniTitle.ng-binding", visible: true)
 end
